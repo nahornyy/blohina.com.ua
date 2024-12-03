@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term"]
 [languages]
   [languages.uk]
     languageCode = 'uk'
-    languageName = "Українська"
+    languageName = "Украинский"
     title = 'Адвокат Блохіна Наталія Вікторівна'
     weight = 1
 
@@ -48,7 +48,7 @@ disableKinds = ["taxonomy", "term"]
     
     title = 'Адвокат Блохина Наталия Викторовна'
     weight = 2
-    languageName = "Русский"
+    languageName = "Російська"
     [languages.ru.menus]
       [[languages.ru.menus.main]]
         name = 'Главная'
