@@ -1,14 +1,17 @@
 {{ define "main" }}
 
-{{ partial "breadcrumbs.html" . }}
+<div class="uk-container uk-container-medium uk-margin-top">
+    {{ partial "breadcrumbs.html" . }}
 
 
-<div class="uk-container uk-container-middle uk-margin-bottom">
-    <h1 class="uk-heading-divider">{{ .Title}}</h1>
+
+    <h2 class="uk-heading-small uk-text-center">{{ .Title }}</h2>
+
+    <hr class="uk-divider-icon">
 
 </div>
 
-<div class="uk-container uk-container-middle">
+<div class="uk-container uk-container-middle uk-margin-top">
     <!-- Place <div> tag where you want the feed to appear -->
     <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank"
             class="crt-logo crt-tag">Powered by Curator.io</a></div>
