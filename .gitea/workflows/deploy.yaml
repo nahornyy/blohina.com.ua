@@ -33,7 +33,7 @@ jobs:
         run: ${{ gitea.workspace }}/bin/hugo --minify --cleanDestinationDir 
 
       - name: Build the static webpage (docker)
-        uses: docker://hugomods/hugo:latest
+        uses: docker://hugomods/hugo
         run: hugo --minify --cleanDestinationDir 
       
       - name: rsync deployments
