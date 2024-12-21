@@ -27,4 +27,4 @@ jobs:
       - name: Unpack Hugo
         run: tar -xf /tmp/hugo/* -C ${{ gitea.workspace }}/bin
       - name: Build the static webpage
-        run: ${{ gitea.workspace }}/bin/hugo --minify
+        run: ${{ gitea.workspace }}/bin/hugo --minify --cleanDestinationDir && rsync -avzhe ssh ${{ gitea.workspace }}/public/ root@192.168.50.105:/www/wwwroot/new.blohina.com.ua --delete
