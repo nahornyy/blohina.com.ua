@@ -22,4 +22,4 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: Europe/Kyiv
-        run: ${{ gitea.workspace }}/hugo --minify
+        run: cd ${{ gitea.workspace }} && hugo --minify
