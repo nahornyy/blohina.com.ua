@@ -35,4 +35,4 @@ jobs:
           chmod 600 ${{ gitea.workspace }}/key
 
       - name: Build the static webpage
-        run: ${{ gitea.workspace }}/bin/hugo --minify --cleanDestinationDir && rsync -avzhe ssh -i ${{ gitea.workspace }}/key ${{ gitea.workspace }}/public/ root@192.168.50.105:/www/wwwroot/new.blohina.com.ua --delete
+        run: ${{ gitea.workspace }}/bin/hugo --minify --cleanDestinationDir && rsync -avzhe ssh -i ${{ gitea.workspace }}/keys/keys ${{ gitea.workspace }}/public/ root@192.168.50.105:/www/wwwroot/new.blohina.com.ua --delete
