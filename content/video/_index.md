@@ -1,4 +1,4 @@
 +++
 title = 'Відео'
-
+hidden = true
 +++

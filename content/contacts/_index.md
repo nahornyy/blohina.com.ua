@@ -1,4 +1,4 @@
 +++
 title = 'Контакти'
-
+hidden = true
 +++
