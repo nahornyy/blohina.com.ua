@@ -28,17 +28,17 @@ jobs:
         run: tar -xf /tmp/hugo/* -C ${{ gitea.workspace }}/bin
 
       - name: Add SSH key
-              env:
-                  SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-              run: |
-                  mkdir -p /home/runner/.ssh
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+          mkdir -p /home/runner/.ssh
                   # Replace example.com with the hostname of the machine
                   # you're SSH-ing into
-                  ssh-keyscan example.com >> /home/runner/.ssh/known_hosts
+          ssh-keyscan example.com >> /home/runner/.ssh/known_hosts
                   # DOKKU_SSH_KEY is the name of the repository secret
-                  echo "${{ secrets.DOKKU_SSH_KEYS }}" > /home/runner/.ssh/github_actions
-                  chmod 600 /home/runner/.ssh/github_actions
-                  ssh-agent -a $SSH_AUTH_SOCK > /dev/null	
-                  ssh-add /home/runner/.ssh/github_actions
+          echo "${{ secrets.DOKKU_SSH_KEYS }}" > /home/runner/.ssh/github_actions
+          chmod 600 /home/runner/.ssh/github_actions
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null	
+          ssh-add /home/runner/.ssh/github_actions
       - name: Build the static webpage
         run: ${{ gitea.workspace }}/bin/hugo --minify --cleanDestinationDir && rsync -avzhe ssh ${{ gitea.workspace }}/public/ root@192.168.50.105:/www/wwwroot/new.blohina.com.ua --delete
