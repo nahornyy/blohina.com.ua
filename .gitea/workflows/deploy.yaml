@@ -27,12 +27,7 @@ jobs:
       - name: Unpack Hugo
         run: tar -xf /tmp/hugo/* -C ${{ gitea.workspace }}/bin
 
-      - name: Add SSH key
-        env:
-          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        run: |
-          echo "${{ secrets.DOKKU_SSH_KEYS }}" > ${{ gitea.workspace }}/key
-          chmod 600 ${{ gitea.workspace }}/key
+
 
       - name: Build the static webpage
         run: ${{ gitea.workspace }}/bin/hugo --minify --cleanDestinationDir 
@@ -49,4 +44,4 @@ jobs:
           remote_path: /www/wwwroot/new.blohina.com.ua
           remote_host: 192.168.50.105
           remote_user: root
-          remote_key: ${{ secrets.DEPLOY_KEY }}  
+          remote_key: ${{ secrets.AAPANEL_SSH_KEYS }}  
