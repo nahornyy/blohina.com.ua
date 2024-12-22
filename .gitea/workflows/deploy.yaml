@@ -35,7 +35,7 @@ jobs:
  
       
       - name: rsync deployments
-        uses: burnett01/rsync-deployments@4.1
+        uses: burnett01/rsync-deployments@7.0.1
         with:
           # -v: verbose
           # -z: compress files during transfer
