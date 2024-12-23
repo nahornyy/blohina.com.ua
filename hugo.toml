@@ -5,6 +5,7 @@ title = 'Адвокат Блохіна Наталія Вікторівна'
 theme = 'uikit'
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
+disableHugoGeneratorInject = true
 
 
 
