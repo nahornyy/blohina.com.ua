@@ -1,1 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://blohina.com.ua/uk/sitemap.xml</loc></sitemap><sitemap><loc>https://blohina.com.ua/ru/sitemap.xml</loc></sitemap></sitemapindex>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://localhost:1313/uk/sitemap.xml</loc>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:1313/ru/sitemap.xml</loc>
+    
+  </sitemap>
+  
+</sitemapindex>
