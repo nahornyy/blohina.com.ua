@@ -10,7 +10,7 @@
         <div class="uk-width-1-3@m uk-first-column">
             <div class="uk-margin">
                 {{ $image := .Resources.GetMatch "/images/portret.jpg" }}
-                <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .Site.Title }}">
+                <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .Site.Title }}" loading="lazy">
 
             </div>
         </div>
