@@ -9,8 +9,10 @@
     <div class="tm-grid-expand uk-grid-margin uk-grid" uk-grid="">
         <div class="uk-width-1-3@m uk-first-column">
             <div class="uk-margin">
-                {{ $image := .Resources.GetMatch "/images/portret.jpg" }}
-                <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .Site.Title }}" loading="lazy">
+                {{ $image := .Resources.GetMatch "/images/portret2.jpg" }}
+                {{ $image := $image.Process "webp" }}
+                 <img alt="{{ .Site.Title }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
+                
 
             </div>
         </div>
