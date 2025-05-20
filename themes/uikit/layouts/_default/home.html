@@ -12,7 +12,7 @@
                 {{ $image := .Resources.GetMatch "/images/portret2.jpg" }}
                 {{ $image := $image.Process "webp" }}
                  <img alt="{{ .Site.Title }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
-                
+
 
             </div>
         </div>
