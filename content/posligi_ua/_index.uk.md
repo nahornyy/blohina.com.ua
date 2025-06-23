@@ -1,5 +1,5 @@
 +++
-title = 'Послугі'
+title = 'Послуги'
 subtitle = 'Україна'
 hidden = true
 +++

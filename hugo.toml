@@ -23,7 +23,10 @@ disableHugoGeneratorInject = true
         pageRef = '/'
         weight = 10
 
-
+      [[languages.uk.menus.main]]
+        name = 'Кваліфікація'
+        url = '/#qalification'
+        weight = 15
         
       [[languages.uk.menus.main]]
         name = 'Послуги'
@@ -55,6 +58,10 @@ disableHugoGeneratorInject = true
         name = 'Главная'
         pageRef = '/'
         weight = 10
+      [[languages.ru.menus.main]]
+        name = 'Квалификация'
+        url = '/ru/#qalification'
+        weight = 15
       [[languages.ru.menus.main]]
         name = 'Услуги'
         url = '/ru/#usligi'
